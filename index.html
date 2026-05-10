@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Sense Cam</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <div class="logo">
+                <img src="imagens/logo.png" alt="Smart Sense Cam">
+                <h1>Smart Sense Cam</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#loginModal">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="container banner-content">
+
+            <div class="banner-text">
+                <h1>Smart Sense Cam – Inteligência em cada clique</h1>
+                <p>Modo automático e manual para qualquer cenário.</p>
+                <button class="btn-primary">Experimente Agora</button>
+            </div>
+
+            <div class="banner-image">
+                <img src="imagens/banner-camera.jpg" alt="Camera">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+
+            <h2 class="section-title">Funcionalidades</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class='bx bx-brain'></i>
+                    </div>
+                    <h3>Reconhecimento de Cena</h3>
+                    <p>Ajuste automático baseado no ambiente.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class='bx bx-cog'></i>
+                    </div>
+                    <h3>Modo Manual</h3>
+                    <p>Controle total da câmera.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class='bx bx-images'></i>
+                    </div>
+                    <h3>Galeria Interativa</h3>
+                    <p>Navegue facilmente pelas imagens.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class='bx bx-text'></i>
+                    </div>
+                    <h3>Extração de Texto</h3>
+                    <p>Captura inteligente de textos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">
+                Galeria
+            </h2>
+            <div class="slider">
+                <img id="sliderImage" src="imagens/galeria1.jpg" alt="Galeria">
+                <div class="slider-buttons">
+                    <button id="prevBtn">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <button id="nextBtn">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Digite seu nome">
+                <input type="email" id="email" placeholder="Digite seu email">
+                <input type="password" id="password" placeholder="Digite sua senha">
+                <button type="submit">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <h3>Smart Sense Cam</h3>
+                <p>Inteligência em cada clique.</p>
+            </div>
+            <div>
+                <h3>Contato</h3>
+                <p>contato@smartsensecam.com</p>
+                <p>(11) 99999-9999</p>
+            </div>
+            <div>
+                <h3>Links</h3>
+                <a href="#home">Home</a><br>
+                <a href="#features">Funcionalidades</a><br>
+                <a href="#gallery">Galeria</a><br>
+                <a href="#contact">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="loginModal">
+
+        <div class="modal-content">
+
+            <a href="#" class="close" id="closeModal">X</a>
+
+            <h2>Login</h2>
+
+            <form id="loginForm">
+                <input
+                    type="text"
+                    id="loginUser"
+                    placeholder="Digite seu usuário">
+                <input type="password" id="loginPassword" placeholder="Digite sua senha">
+                <button type="submit">Entrar</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -215,3 +215,192 @@ loginForm.addEventListener(
 
     }
 );
+// FORMULÁRIO DE CONTATO
+const formulario =
+    document.getElementById("contactForm");
+
+formulario.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+        let nome =
+            document.getElementById("name")
+            .value.trim();
+
+        let email =
+            document.getElementById("email")
+            .value.trim();
+
+        let senha =
+            document.getElementById("password")
+            .value.trim();
+
+
+        // VALIDAÇÃO NOME
+        if (nome === "") {
+
+            alert("Digite seu nome!");
+            return;
+
+        }
+
+
+        // VALIDAÇÃO EMAIL
+        if (email === "") {
+
+            alert("Digite seu email!");
+            return;
+
+        }
+
+        if (
+            email.includes("@") === false ||
+            email.includes(".") === false
+        ) {
+
+            alert("Digite um email válido!");
+            return;
+
+        }
+
+
+        // VALIDAÇÃO SENHA
+        if (senha === "") {
+
+            alert("Digite sua senha!");
+            return;
+
+        }
+
+        if (senha.length < 4) {
+
+            alert(
+                "A senha deve possuir no mínimo 4 caracteres!"
+            );
+
+            return;
+
+        }
+
+
+        // FORMATAR NOME
+        let nomeFormatado =
+            nome.charAt(0).toUpperCase() +
+            nome.slice(1).toLowerCase();
+
+
+        // SUCESSO
+        alert(
+            `Formulário enviado com sucesso,
+            ${nomeFormatado}!`
+        );
+
+        console.log("FORMULÁRIO:");
+        console.log(`Nome: ${nomeFormatado}`);
+        console.log(`Email: ${email}`);
+
+
+        // LIMPAR FORMULÁRIO
+        formulario.reset();
+
+    }
+);
+
+// EFEITO NOS CARDS
+const cards =
+    document.querySelectorAll(".card");
+
+cards.forEach(function (card) {
+
+    // MOUSE ENTRA
+    card.addEventListener(
+        "mouseover",
+        function () {
+
+            card.style.backgroundColor =
+                "#eaf1ff";
+
+            card.style.transform =
+                "translateY(-10px)";
+
+        }
+    );
+
+
+    // MOUSE SAI
+    card.addEventListener(
+        "mouseout",
+        function () {
+
+            card.style.backgroundColor =
+                "#f7f9fd";
+
+            card.style.transform =
+                "translateY(0px)";
+
+        }
+    );
+
+});
+
+// CONTADOR DE CARACTERES
+const campoNome =
+    document.getElementById("name");
+
+campoNome.addEventListener(
+    "keyup",
+    function () {
+
+        let quantidade =
+            campoNome.value.length;
+
+        console.log(
+            `Caracteres digitados:
+            ${quantidade}`
+        );
+
+    }
+);
+
+// VERIFICAR IMAGENS
+function isImagem(nomeArquivo) {
+
+    let lower =
+        nomeArquivo.toLowerCase();
+
+    return (
+
+        lower.endsWith(".png") ||
+        lower.endsWith(".jpg") ||
+        lower.endsWith(".jpeg") ||
+        lower.endsWith(".webp")
+
+    );
+
+}
+
+
+// TESTE DAS IMAGENS
+for (let i = 0; i < imagens.length; i++) {
+
+    console.log(
+
+        `${imagens[i]}
+        -> ${isImagem(imagens[i])}`
+
+    );
+
+}
+
+// DATA E HORA
+const dataAtual = new Date();
+
+console.log(
+
+    `Projeto iniciado em:
+    ${dataAtual.toLocaleDateString()}
+    ${dataAtual.toLocaleTimeString()}`
+
+);

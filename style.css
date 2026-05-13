@@ -99,3 +99,105 @@ nav a:hover{
     margin-bottom: 20px;
     line-height: 1.2;
     }
+
+    .banner-text p{
+    color: #dbeafe;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-primary{
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    background-color: #38bdf8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover{
+    background-color: #0ea5e9;
+}
+
+.banner-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-image img{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    display: block;
+}
+
+section{
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: #0f172a;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+}
+
+.card{
+    background-color: #f7f9fd;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card-icon{
+    font-size: 55px;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.card h3{
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.gallery{
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.slider{
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.slider img{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    display: block;
+}
